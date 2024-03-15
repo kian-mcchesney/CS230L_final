@@ -3,14 +3,15 @@ import mysql from "mysql"
 
 const app = express()
 const db  = mysql.createConnection({
-    host: "3306",
+    host: "8800",
     user: "root",
     password: "password",
     database: "test",
+    port: 3306
 })
 //
 app.get("/", (req,res) => {
-    res.json("hello this is the backend")
+    res.json("hello this is the backend!")
 
 })
 
@@ -23,7 +24,7 @@ app.get("/books", (req,res)=>{
 
 })
 
-app.listen(3306,() => {
+app.listen(8800,() => {
     console.log("Connected to backend!");
 })
 
