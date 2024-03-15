@@ -6,12 +6,11 @@ const db  = mysql.createConnection({
     host: "local",
     user: "root",
     password: "password123",
-    database: "test",
-    port: 3306
+    database: "test"
 })
 //
 app.get("/", (req,res) => {
-    res.json("hello this is the backend!")
+    res.json("hello this is the backend.")
 
 })
 
