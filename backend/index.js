@@ -14,9 +14,7 @@ app.get("/", (req,res) => {
 
 })
 
-//getting an error for EADDRINUSE so used this code to find available port
-const server= app.listen(0,() => {
-    const port = server.address().port;
+app.listen(8800,() => {
     console.log("Connected to backend!");
 })
 
