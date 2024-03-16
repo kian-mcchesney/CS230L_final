@@ -8,10 +8,15 @@ import {
 import Books from './pages/Books';
 import Add from './pages/Add';
 import Update from './pages/Update';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+
+
 
 function App() {
   return (
     <div className="App">
+    
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Books/>} />
@@ -20,6 +25,7 @@ function App() {
         </Routes>
       </BrowserRouter>
     </div>
+
   );
 }
 
