@@ -19,7 +19,7 @@ const handleChange=(e)=>{
 const handleClick = async e =>{
     e.preventDefault();
     try {
-        await axios.post("http://localhost:800/books",book);
+        await axios.post("http://localhost:8800/books",book);
         navigate("/")
     } catch (err) {
         console.log(err);
@@ -43,7 +43,7 @@ console.log(book);
 
         <button onClick={handleClick}>Add</button>
         {error && "Error: something went wrong"}
-        <Link to="/">Home</Link>
+        <button onClick={() => navigate("/")}>Home</button>
         </div>
     )
 }
