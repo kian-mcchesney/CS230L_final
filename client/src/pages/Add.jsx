@@ -41,7 +41,7 @@ const handleClick = async (e) =>{
             <input type="number" placeholder='price' onChange={handleChange} name = "price"></input>
             <input type="text" placeholder='cover' onChange={handleChange}name="cover"></input>
 
-        <button onClick={handleClick}>Add</button>
+        <button className="formButton" onClick={handleClick}>Add</button>
         {error && "Error: something went wrong"}
         <button onClick={() => navigate("/")}>Home</button>
         </div>
