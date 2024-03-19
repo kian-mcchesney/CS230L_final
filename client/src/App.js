@@ -20,7 +20,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Books/>} />
           <Route path="/add" element={<Add/>} />
-          <Route path="/update/:id" element={<Update/>} />
+          <Route path="/update" element={<Update/>} />
         </Routes>
       </BrowserRouter>
     </div>
