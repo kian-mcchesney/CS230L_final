@@ -17,7 +17,7 @@ const handleChange=(e)=>{
     setBook((prev) => ({...prev,[e.target.name]: e.target.value}));
 }
 const handleClick = async e =>{
-    e.prevetDefault();
+    e.preventDefault();
     try {
         await axios.post("http://localhost:800/books",book);
         navigate("/")

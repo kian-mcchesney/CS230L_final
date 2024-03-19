@@ -5,7 +5,8 @@ import cors from 'cors'
 
 
 
-const app = express()
+const app = express();
+
 const db  = mysql.createConnection({
     host: "localhost",
     user: "root",
@@ -48,7 +49,7 @@ app.post("/books",(req,res)=>{
         req.body.price,
         req.body.cover
     ];
-    db.query(q, values, (err, data) => {
+    db.query([...values,bookId], (err, data) => {
         if(err) return res.json(err);
         return res.json(data);
     })
