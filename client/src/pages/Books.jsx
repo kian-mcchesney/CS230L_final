@@ -19,9 +19,9 @@ const Books = () => {
         fetchAllBooks();
     }, []);
 
-    const handleDelete = async (id) => {
+    const handleDelete = async (id)=>{
         try {
-            await axios.delete("http://localhost:8800/book/${id}")
+            await axios.delete("http://localhost:8800/books/"+id)
             window.location.reload()
         } catch (err) {
             console.log(err)
