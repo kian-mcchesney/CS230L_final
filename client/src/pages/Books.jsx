@@ -31,6 +31,7 @@ const Books = () => {
                        <h2>{book.title}</h2>
                        <p>{book.description}</p>
                        <span>{book.price}</span>
+                       <button className="delete">Delete book</button>
                     </div>
                 ))}
             </div>
