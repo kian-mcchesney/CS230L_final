@@ -42,6 +42,8 @@ console.log(book);
             <input type="text" placeholder='cover' onChange={handleChange}name="cover"></input>
 
         <button onClick={handleClick}>Add</button>
+        {error && "Error: something went wrong"}
+        <Link to="/">Home</Link>
         </div>
     )
 }
