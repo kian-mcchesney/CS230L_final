@@ -19,6 +19,8 @@ const Books = () => {
         fetchAllBooks();
     }, []);
 
+    console.log(books);
+    
     return (
         <div>
             <h1>Kian's Book Shop</h1>

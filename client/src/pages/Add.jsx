@@ -11,15 +11,18 @@ const Add = ()=> {
         cover:"",
 
     });
+const [error,setError] = useState(false)
+const navigate = useNavigate();
+
 
 
 const handleChange=(e)=>{
     setBook((prev) => ({...prev,[e.target.name]: e.target.value}));
 }
-const handleClick = async e =>{
+const handleClick = async (e) =>{
     e.preventDefault();
     try {
-        await axios.post("http://localhost:8800/books",book);
+        await axios.post("http://localhost:8800/books", book);
         navigate("/")
     } catch (err) {
         console.log(err);
@@ -27,10 +30,7 @@ const handleClick = async e =>{
         
     }
 }
-const [error,setError] = useState(false)
-const navigate = useNavigate();
 
-console.log(book);
 
     return(
         <div className='form'>
