@@ -29,9 +29,9 @@ const handleClick = async (e) =>{
      
         await axios.put(`http://localhost:8800/books/${bookID}`, book);
         navigate("/")
-    } catch (error) {
+    } catch (err) {
        
-        console.log(error);
+        console.log(err);
         setError(true)
         
     }
@@ -50,7 +50,7 @@ const handleClick = async (e) =>{
         <button className="formButton" onClick={handleClick}>Update</button>
        
         <button onClick={() => navigate("/")}>Home</button>
-        {error && "Something went wrong!"}
+       {error && "Something went wrong!"}
         </div>
     )
 }
