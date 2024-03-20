@@ -1,6 +1,6 @@
 import React from 'react'
 import {useState} from "react";
-import { useNavigate, useLocation} from "react-router-dom"
+import { Link, useNavigate, useLocation} from "react-router-dom"
 import axios from 'axios';
 
 const Update = ()=> {
@@ -49,7 +49,10 @@ const handleClick = async (e) =>{
 
         <button className="formButton" onClick={handleClick}>Update</button>
        
-        <button onClick={() => navigate("/")}>Home</button>
+        
+        <button>
+                <Link to="/">Home</Link>
+            </button>
        {error && "Something went wrong!"}
         </div>
     )

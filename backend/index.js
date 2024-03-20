@@ -73,10 +73,11 @@ const values = [
     req.body.description,
     req.body.price,
     req.body.cover,
+    
 ];
 
 db.query(q,[...values,bookID], (err,data)=> {
-    if(err) return res.send(err);
+    if(err) return jes.send(err);
     return jes.json(data);
 })
 
